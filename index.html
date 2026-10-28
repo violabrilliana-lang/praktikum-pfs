@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Viola</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fffafd;
+        color: #514653;
+      }
+
+      .navbar {
+        background-color: #f1e7ff;
+      }
+
+      .navbar-brand {
+        color: #76518d;
+        font-weight: 700;
+      }
+
+      .nav-link {
+        color: #68566f;
+      }
+
+      .nav-link:hover {
+        color: #a16dbb;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #f1e7ff, #ffe8ef, #fff5d9);
+        padding: 100px 0;
+      }
+
+      .hero h1 {
+        color: #76518d;
+        font-weight: 700;
+      }
+
+      .hero p {
+        line-height: 1.8;
+      }
+
+      .foto-profil {
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+        border: 7px solid white;
+        box-shadow: 0 8px 25px rgba(100, 70, 120, 0.18);
+      }
+
+      .btn-pastel {
+        background-color: #b99bd3;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 11px 25px;
+      }
+
+      .btn-pastel:hover {
+        background-color: #9876b5;
+        color: white;
+      }
+
+      .section-title {
+        color: #76518d;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .section-padding {
+        padding: 75px 0;
+      }
+
+      .about-box {
+        background-color: #fff0f5;
+        border-radius: 20px;
+        padding: 30px;
+        height: 100%;
+      }
+
+      .skill-card {
+        background-color: #f3ebff;
+        border: none;
+        border-radius: 18px;
+        padding: 25px 15px;
+        height: 100%;
+        transition: 0.3s;
+      }
+
+      .skill-card:hover,
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .project-card {
+        border: none;
+        border-radius: 18px;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 0 5px 18px rgba(90, 60, 100, 0.08);
+        height: 100%;
+        transition: 0.3s;
+      }
+
+      .project-top {
+        padding: 25px;
+        font-size: 40px;
+        text-align: center;
+      }
+
+      .pink {
+        background-color: #ffe4ed;
+      }
+
+      .yellow {
+        background-color: #fff1c9;
+      }
+
+      .blue {
+        background-color: #e0f2ff;
+      }
+
+      .purple {
+        background-color: #eee3ff;
+      }
+
+      .journey {
+        background-color: #fff4df;
+        border-radius: 18px;
+        padding: 25px;
+      }
+
+      .contact-box {
+        background-color: #f1e7ff;
+        border-radius: 20px;
+        padding: 35px;
+      }
+
+      footer {
+        background-color: #76518d;
+        color: white;
+        padding: 22px;
+      }
+
+      @media (max-width: 767px) {
+        .hero {
+          padding: 65px 0;
+          text-align: center;
+        }
+
+        .foto-profil {
+          width: 220px;
+          height: 220px;
+          margin-bottom: 30px;
+        }
+
+        .hero h1 {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#beranda">Viola's Portfolio 🌷</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuNavbar"
+          aria-controls="menuNavbar"
+          aria-expanded="false"
+          aria-label="Buka navigasi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#beranda">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tentang">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skill">Skill</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#project">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- BERANDA / HERO -->
+    <section class="hero" id="beranda">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-5 text-center mb-4 mb-md-0">
+            <!-- FOTO PROFIL -->
+            <img
+              src="img/foto-viola.jpg"
+              alt="Foto profil Viola"
+              class="foto-profil"
+            />
+          </div>
+
+          <div class="col-md-7">
+            <p class="mb-2">Halo, selamat datang di website-ku! 👋</p>
+
+            <h1>Hai, aku Viola!</h1>
+
+            <h4 class="mb-3">Mahasiswa yang sedang belajar teknologi 💻</h4>
+
+            <p>
+              Aku sedang belajar membuat website dan mengenal dunia pemrograman.
+              Website ini menjadi tempat untuk memperkenalkan diri, membagikan
+              kemampuan, dan menampilkan project yang sedang aku pelajari.
+            </p>
+
+            <a href="#tentang" class="btn btn-pastel mt-2"> Kenalan Yuk! </a>
+
+            <a
+              href="#project"
+              class="btn btn-outline-secondary rounded-pill mt-2 ms-2"
+            >
+              Lihat Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TENTANG SAYA -->
+    <section class="section-padding" id="tentang">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Tentang Aku 🌸</h2>
+          <p>Kenalan lebih dekat denganku!</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="about-box">
+              <h4>👩🏻‍💻 Siapa Aku?</h4>
+              <p>
+                Aku Viola, seorang mahasiswa yang sedang mempelajari teknologi
+                informasi. Aku ingin terus mengembangkan kemampuan dan mencoba
+                hal-hal baru di bidang teknologi.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="about-box">
+              <h4>🌷 Hal yang Aku Suka</h4>
+              <p>
+                Aku suka belajar hal baru, mencoba membuat website, mengerjakan
+                project, dan mencari pengalaman yang bisa menambah
+                pengetahuanku.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILL -->
+    <section
+      class="section-padding"
+      id="skill"
+      style="background-color: #fff5f8"
+    >
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Skill yang Sedang Dipelajari 💗</h2>
+          <p>Beberapa kemampuan yang sedang aku kembangkan.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-6 col-md-3">
+            <div class="card skill-card text-center">
+              <h2>🌐</h2>
+              <h5>HTML</h5>
+              <p class="small mb-0">Membuat struktur website.</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="card skill-card text-center">
+              <h2>🎨</h2>
+              <h5>CSS</h5>
+              <p class="small mb-0">Mengatur tampilan website.</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="card skill-card text-center">
+              <h2>🅱️</h2>
+              <h5>Bootstrap</h5>
+              <p class="small mb-0">Membuat desain responsif.</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="card skill-card text-center">
+              <h2>💻</h2>
+              <h5>JavaScript</h5>
+              <p class="small mb-0">Belajar membuat website interaktif.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT -->
+    <section class="section-padding" id="project">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Project-ku ✨</h2>
+          <p>Contoh project yang bisa ditampilkan di portfolio.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card project-card">
+              <div class="project-top pink">🌷</div>
+              <div class="card-body p-4">
+                <h5>Website Profil</h5>
+                <p>
+                  Website sederhana untuk memperkenalkan diri menggunakan HTML
+                  dan CSS.
+                </p>
+                <span class="badge rounded-pill text-bg-danger"> HTML </span>
+                <span class="badge rounded-pill text-bg-secondary"> CSS </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card project-card">
+              <div class="project-top yellow">📚</div>
+              <div class="card-body p-4">
+                <h5>Website Informasi</h5>
+                <p>
+                  Latihan membuat halaman informasi dengan susunan konten yang
+                  rapi dan jelas.
+                </p>
+                <span class="badge rounded-pill text-bg-warning"> HTML </span>
+                <span class="badge rounded-pill text-bg-primary">
+                  Bootstrap
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card project-card">
+              <div class="project-top blue">💻</div>
+              <div class="card-body p-4">
+                <h5>Portfolio Bootstrap</h5>
+                <p>
+                  Website portfolio ini dibuat untuk mempraktikkan komponen
+                  Bootstrap.
+                </p>
+                <span class="badge rounded-pill text-bg-info"> Bootstrap </span>
+                <span class="badge rounded-pill text-bg-success">
+                  Responsive
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERJALANAN BELAJAR -->
+    <section class="section-padding" style="background-color: #fff9ec">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Perjalanan Belajarku 🌼</h2>
+          <p>Pelan-pelan belajar, sedikit demi sedikit berkembang.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="journey mb-3">
+              <h5>🌱 Mengenal HTML</h5>
+              <p class="mb-0">
+                Belajar membuat struktur dasar dan elemen dalam halaman website.
+              </p>
+            </div>
+
+            <div class="journey mb-3">
+              <h5>🎨 Belajar CSS</h5>
+              <p class="mb-0">
+                Mencoba mengatur warna, ukuran teks, jarak, dan tata letak
+                halaman.
+              </p>
+            </div>
+
+            <div class="journey">
+              <h5>🚀 Mengenal Bootstrap</h5>
+              <p class="mb-0">
+                Belajar menggunakan komponen Bootstrap untuk membuat website
+                yang responsif.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="section-padding" id="kontak">
+      <div class="container">
+        <div class="contact-box text-center">
+          <h2 class="section-title">Hubungi Aku 💌</h2>
+          <p>
+            Terima kasih sudah mengunjungi portfolio-ku! Kamu bisa mengganti
+            informasi di bawah ini dengan kontak milikmu.
+          </p>
+
+          <p class="mb-2">📧 Email: flvlaa39@gmail.com</p>
+
+          <p class="mb-4">📱 Instagram: @ddumpysvla</p>
+
+          <a href="mailto:emailkamu@example.com" class="btn btn-primary">
+            Kirim Email
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center">
+      <p class="mb-1">Dibuat dengan 💗 oleh Viola</p>
+      <small>Portfolio Bootstrap 2026</small>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
